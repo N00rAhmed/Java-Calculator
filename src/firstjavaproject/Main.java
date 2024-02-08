@@ -1,5 +1,5 @@
 package firstjavaproject;
-import java.util.Scanner; // importd scanner class
+import java.util.Scanner; // import scanner class
 import java.time.LocalDateTime;
 
 public class Main {
@@ -38,14 +38,10 @@ public class Main {
 
 		switch(operator) {
 		case "+":
-//			int addition_calc = num1 + num2;
-//			System.out.println(num1 + " + " + num2 + " = " + addition_calc);
 			Addition();
 			break;
 			
 		case "-":
-//			int subtraction_calc = num1 - num2;
-//			System.out.println(num1 + " - " + num2 + " = " + subtraction_calc);
 			Subtraction();
 			break;
 		
@@ -53,39 +49,7 @@ public class Main {
 			System.out.println("error invalid");
 		}
 
-
-//		if (operator == "+") {
-//			int addition_calc = num1 + num2;
-//			System.out.println(num1 + " + " + num2 + " = " + addition_calc);
-//		}
-//		else if (operator == "-") {
-//			int subtraction_calc = num1 - num2;
-//			System.out.println(num1 + " - " + num2 + " = " + subtraction_calc);
-//
-//		}
-//		else {
-//			System.out.println("error not found");
-//		}
-//			
-		
-		
-		
-		
-		
-		
-//		System.out.println("wtf");
-		
-//		LocalDateTime datetTime = LocalDateTime.now();
-//		System.out.println(datetTime);
-//		
-//		Scanner myObj = new Scanner(System.in); // creates scanner object
-//		System.out.println("Enter username: ");
-//		String userName = myObj.nextLine(); // read user input
-//		
-//		System.out.println("Your UserName is " + userName + " COOL !!! :)");
-		
-		//make a calulcater in java that accepts user input and maybe also allows choice of operation
-		//also maybe include a secret feature
 	}
 
 }
+
