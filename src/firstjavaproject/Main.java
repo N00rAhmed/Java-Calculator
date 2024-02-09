@@ -6,10 +6,8 @@ public class Main {
 	
 	static int num1;
 	static int num2;
-
-	static Scanner input = new Scanner(System.in); // creates scanner object
-
 	
+	static Scanner input = new Scanner(System.in); // creates scanner object
 	
 	static void Addition() {
 		int addition_calc = num1 + num2;
@@ -36,10 +34,10 @@ public class Main {
 			System.out.println("error not found");
 		}
 	}
+	
 
 	static void calc() {
-//		Scanner input = new Scanner(System.in); // creates scanner object
-
+		
 		System.out.println("Enter num1: ");
 		num1 = input.nextInt();		
 		
@@ -65,23 +63,16 @@ public class Main {
 		
 		restart();
 		
-
 	}
 	
 	
-
-	
 	public static void main(String[] args) {
-				
-//		Scanner input = new Scanner(System.in); // creates scanner object
 		
 		LocalDateTime datetTime = LocalDateTime.now();
 		System.out.println(datetTime);
 
 		calc();
 		
-		
-
 	}
 
 }
