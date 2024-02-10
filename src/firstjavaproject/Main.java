@@ -4,20 +4,31 @@ import java.time.LocalDateTime;
 
 public class Main {
 	
-	static int num1;
-	static int num2;
+	static double num1;
+	static double num2;
 	
 	static Scanner input = new Scanner(System.in); // creates scanner object
 	
 	static void Addition() {
-		int addition_calc = num1 + num2;
+		var addition_calc = num1 + num2;
 		System.out.println(num1 + " + " + num2 + " = " + addition_calc);
 	}
 	
 	static void Subtraction() {
-		int subtraction_calc = num1 - num2;
+		var subtraction_calc = num1 - num2;
 		System.out.println(num1 + " - " + num2 + " = " + subtraction_calc);
 	}
+	
+	static void Division() { 
+		var division_calc = num1 / num2;
+		System.out.println(num1 + " / " + num2 + " = " + division_calc);
+	}
+	
+	static void Multiplication() { 
+		var multiplication_calc = num1 * num2;
+		System.out.println(num1 + " * " + num2 + " = " + multiplication_calc);
+	}
+
 	
 	static public void restart() {
 		System.out.println("do you wanna restart the program y/n: ");
@@ -45,7 +56,7 @@ public class Main {
 		num2 = input.nextInt();
 		
 		
-		System.out.println("choose a mathematical operator +, - : ");
+		System.out.println("choose a mathematical operator +, -, /, * : ");
 		String operator =  input.next();
 		
 		switch(operator) {
@@ -55,6 +66,14 @@ public class Main {
 			
 		case "-":
 			Subtraction();
+			break;
+			
+		case "/":
+			Division();
+			break;
+		
+		case "*":
+			Multiplication();
 			break;
 		
 		default:
