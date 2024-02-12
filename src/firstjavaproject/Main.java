@@ -1,6 +1,7 @@
 package firstjavaproject;
 import java.util.Scanner; // import scanner class
 import java.time.LocalDateTime;
+import java.util.InputMismatchException;
 
 public class Main {
 	
@@ -49,12 +50,37 @@ public class Main {
 
 	static void calc() {
 		
-		System.out.println("Enter num1: ");
-		num1 = input.nextInt();		
+		// make loop which loops over when user input is not a number
+		// add unit testing
+		// make tax calculator from this
 		
-		System.out.println("Enter num2: ");
-		num2 = input.nextInt();
-		
+		while(true) {
+			try {
+			System.out.println("Enter num1: ");
+			num1 = input.nextDouble(); // put.nextDouble defines input value as put.nextDouble
+			break; // If the input is a valid double, exit the loop
+
+			
+		} catch (InputMismatchException e) {
+			System.out.println("invalid input, please try to enter double value: ");
+			input.next();  // clear invalid input from scanner
+		}
+			
+		while(true) {
+			try {
+				System.out.println("Enter num2: ");
+				num2 = input.nextDouble();
+				break;
+
+			}catch(InputMismatchException e) {
+				System.out.println("invalid input, please try to enter double value: ");
+				input.next(); // clear invalid input from scanner
+
+			}
+		}
+		}
+			
+
 		
 		System.out.println("choose a mathematical operator +, -, /, * : ");
 		String operator =  input.next();
