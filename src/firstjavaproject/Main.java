@@ -47,6 +47,20 @@ public class Main {
 		}
 	}
 	
+	
+    static void loadingAnimation() {
+        try {
+            System.out.print("Loading ");
+            for (int i = 0; i < 10; i++) {
+                Thread.sleep(200);  // Sleep for 200 milliseconds
+                System.out.print(". ");
+            }
+            System.out.println();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 	static void calc() {
 		
@@ -59,13 +73,12 @@ public class Main {
 			System.out.println("Enter num1: ");
 			num1 = input.nextDouble(); // put.nextDouble defines input value as put.nextDouble
 			break; // If the input is a valid double, exit the loop
-
 			
 		} catch (InputMismatchException e) {
 			System.out.println("invalid input, please try to enter double value: ");
 			input.next();  // clear invalid input from scanner
 		}
-			
+		}	
 		while(true) {
 			try {
 				System.out.println("Enter num2: ");
@@ -78,7 +91,7 @@ public class Main {
 
 			}
 		}
-		}
+		
 			
 
 		
@@ -112,6 +125,7 @@ public class Main {
 	
 	
 	public static void main(String[] args) {
+		loadingAnimation();
 		
 		LocalDateTime datetTime = LocalDateTime.now();
 		System.out.println(datetTime);
