@@ -1,10 +1,10 @@
 package firstjavaproject;
-import java.util.Scanner; // import scanner class
+import java.util.Scanner;
 import java.time.LocalDateTime;
 import java.util.InputMismatchException;
 
 public class Main {
-	
+
 	static double num1;
 	static double num2;
 	
@@ -35,7 +35,6 @@ public class Main {
 		System.out.println("do you wanna restart the program y/n: ");
 		String restart_option = input.next();
 		
-//		to compare strings use equals method and not == operator
 		if (restart_option.equals("y")) {
 			calc();
 		}
@@ -71,14 +70,15 @@ public class Main {
 		while(true) {
 			try {
 			System.out.println("Enter num1: ");
-			num1 = input.nextDouble(); // put.nextDouble defines input value as put.nextDouble
-			break; // If the input is a valid double, exit the loop
+			num1 = input.nextDouble();
+			break; 
 			
 		} catch (InputMismatchException e) {
-			System.out.println("invalid input, please try to enter double value: ");
-			input.next();  // clear invalid input from scanner
+			System.out.println("Invalid input, please try to enter integer/double value: ");
+			input.next();
 		}
 		}	
+		
 		while(true) {
 			try {
 				System.out.println("Enter num2: ");
@@ -86,16 +86,14 @@ public class Main {
 				break;
 
 			}catch(InputMismatchException e) {
-				System.out.println("invalid input, please try to enter double value: ");
-				input.next(); // clear invalid input from scanner
+				System.out.println("Invalid input, please try to enter integer/double value: ");
+				input.next();
 
 			}
 		}
 		
-			
-
 		
-		System.out.println("choose a mathematical operator +, -, /, * : ");
+		System.out.println("Choose a Mathematical Operator +, -, /, * : ");
 		String operator =  input.next();
 		
 		switch(operator) {
