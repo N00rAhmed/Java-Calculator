@@ -8,7 +8,7 @@ public class Main {
 	static double num1;
 	static double num2;
 	
-	static Scanner input = new Scanner(System.in); // creates scanner object
+	static Scanner input = new Scanner(System.in);
 	
 	static void Addition() {
 		var addition_calc = num1 + num2;
