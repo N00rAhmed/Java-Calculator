@@ -43,7 +43,23 @@ class MainTest {
 	 */
 	@Test
 	void testSubtraction() {
-		fail("Not yet implemented");
+//		fail("Not yet implemented");
+
+        // Arrange
+        Main.num1 = 11;
+        Main.num2 = 2;
+
+        // Redirect System.out to capture the output
+        ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStreamCaptor));
+
+        // Act
+        Main.Subtraction();
+
+        // Assert
+        double expectedSum = 11 - 2;
+        assertEquals("11.0 - 2.0 = " + expectedSum, outputStreamCaptor.toString().trim());
+
 	}
 
 	/**
@@ -51,7 +67,25 @@ class MainTest {
 	 */
 	@Test
 	void testDivision() {
-		fail("Not yet implemented");
+//		fail("Not yet implemented");
+		
+        // Arrange
+        Main.num1 = 18;
+        Main.num2 = 2;
+
+        // Redirect System.out to capture the output
+        ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStreamCaptor));
+
+        // Act
+        Main.Division();
+
+        // Assert
+        double expectedSum = 18 / 2;
+        assertEquals("18.0 / 2.0 = " + expectedSum, outputStreamCaptor.toString().trim());
+
+		
+		
 	}
 
 	/**
@@ -59,7 +93,23 @@ class MainTest {
 	 */
 	@Test
 	void testMultiplication() {
-		fail("Not yet implemented");
+//		fail("Not yet implemented");
+		
+        // Arrange
+        Main.num1 = 2;
+        Main.num2 = 3;
+
+        // Redirect System.out to capture the output
+        ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStreamCaptor));
+
+        // Act
+        Main.Multiplication();
+
+        // Assert
+        double expectedSum = 2 * 3;
+        assertEquals("2.0 * 3.0 = " + expectedSum, outputStreamCaptor.toString().trim());
+
 	}
 
 	/**
