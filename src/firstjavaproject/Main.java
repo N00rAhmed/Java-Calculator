@@ -31,19 +31,40 @@ public class Main {
 	}
 
 	
-	static public void restart() {
-		System.out.println("do you wanna restart the program y/n: ");
-		String restart_option = input.next();
+	static public void restart() {		
 		
-		if (restart_option.equals("y")) {
-			calc();
+		while(true) {
+			
+			try {
+				System.out.println("do you wanna restart the program y/n: ");
+				String restart_option = input.next();
+
+				if (restart_option.equals("y")) {
+					calc();
+					break; 
+				}
+				else if (restart_option.equals("n")) {
+					System.out.println("bye 🙂");
+					break; 
+				}
+			
+		} catch (InputMismatchException e) {
+			System.out.println("Invalid input error not found, please try to enter y/n: ");
+			input.next();
 		}
-		else if (restart_option.equals("n")) {
-			System.out.println("bye 🙂");
-		}
-		else {
-			System.out.println("error not found");
-		}
+		}	
+		
+		
+		
+//		if (restart_option.equals("y")) {
+//			calc();
+//		}
+//		else if (restart_option.equals("n")) {
+//			System.out.println("bye 🙂");
+//		}
+//		else {
+//			System.out.println("error not found");
+//		}
 	}
 
 	
