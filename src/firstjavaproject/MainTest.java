@@ -9,7 +9,17 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Test;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
+import org.junit.jupiter.api.Test;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Test;
 /**
  * 
  */
@@ -117,7 +127,23 @@ class MainTest {
 	 */
 	@Test
 	void testRestart() {
-		fail("Not yet implemented");
+//		fail("Not yet implemented");
+		
+        // Redirect System.in to provide input for the test
+        ByteArrayInputStream inputStream = new ByteArrayInputStream("y\n".getBytes());
+        System.setIn(inputStream);
+
+        // Redirect System.out to capture the output
+        ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStreamCaptor));
+
+        // Act
+        Main.restart();
+
+        // Assert
+        String expectedOutput = "do you wanna restart the program y/n: \n";
+        assertEquals(expectedOutput, outputStreamCaptor.toString().trim());
+
 	}
 
 	/**
@@ -133,7 +159,24 @@ class MainTest {
 	 */
 	@Test
 	void testCalc() {
-		fail("Not yet implemented");
+//		fail("Not yet implemented");
+		
+        // Redirect System.in to provide input for the test
+        ByteArrayInputStream inputStream = new ByteArrayInputStream("5\n3\n+\nn\n".getBytes());
+        System.setIn(inputStream);
+
+        // Redirect System.out to capture the output
+        ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStreamCaptor));
+
+        // Act
+        Main.calc();
+
+        // Assert
+        String expectedOutput = "Enter num1: \nEnter num2: \nChoose a Mathematical Operator +, -, /, * : \n5.0 + 3.0 = 8.0\ndo you wanna restart the program y/n: \nbye";
+        assertEquals(expectedOutput, outputStreamCaptor.toString().trim());
 	}
+	
+    // Add more test cases for different scenarios, such as invalid input, other operations, etc.
 
 }

@@ -39,13 +39,13 @@ public class Main {
 			calc();
 		}
 		else if (restart_option.equals("n")) {
-			System.out.println("bye");
+			System.out.println("bye 🙂");
 		}
 		else {
 			System.out.println("error not found");
 		}
 	}
-	
+
 	
     static void loadingAnimation() {
         try {
