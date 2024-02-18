@@ -18,7 +18,7 @@ javac Main.java
 java Main.java
 ```
 
-## Unit Tests
+## Unit Testing
 
 ### Run Unit Tests
 In eclipse click Main Test button to run unit tests. <br />
