@@ -7,6 +7,7 @@ public class Main {
 
 	static double num1;
 	static double num2;
+	static String operator;
 	
 	static Scanner input = new Scanner(System.in);
 	
@@ -52,19 +53,7 @@ public class Main {
 			System.out.println("Invalid input error not found, please try to enter y/n: ");
 			input.next();
 		}
-		}	
-		
-		
-		
-//		if (restart_option.equals("y")) {
-//			calc();
-//		}
-//		else if (restart_option.equals("n")) {
-//			System.out.println("bye 🙂");
-//		}
-//		else {
-//			System.out.println("error not found");
-//		}
+		}
 	}
 
 	
@@ -115,7 +104,8 @@ public class Main {
 		
 		
 		System.out.println("Choose a Mathematical Operator +, -, /, * : ");
-		String operator =  input.next();
+		operator =  input.next();
+		
 		
 		switch(operator) {
 		case "+":
