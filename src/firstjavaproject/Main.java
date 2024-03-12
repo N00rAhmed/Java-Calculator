@@ -61,7 +61,7 @@ public class Main {
         try {
             System.out.print("Loading ");
             for (int i = 0; i < 10; i++) {
-                Thread.sleep(200);  // Sleep for 200 milliseconds
+                Thread.sleep(200);
                 System.out.print(". ");
             }
             System.out.println();
@@ -72,11 +72,7 @@ public class Main {
 
 
 	static void calc() {
-		
-		// make loop which loops over when user input is not a number
-		// add unit testing
-		// make tax calculator from this
-		
+				
 		while(true) {
 			try {
 			System.out.println("Enter num1: ");
